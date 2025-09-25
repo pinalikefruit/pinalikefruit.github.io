@@ -1,3 +1,7 @@
 theme: jekyll-theme-minimal
 title: Top 10 Attack Vectors
 description: How to Stay Safe
+
+collections:
+  attack_vectors:
+    output: true
