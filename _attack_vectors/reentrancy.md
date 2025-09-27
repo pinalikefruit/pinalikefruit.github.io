@@ -1,11 +1,6 @@
 ---
 layout: default
 title: "Reentrancy"
-rank: 7
-amount_stolen: "$36,000,000"
-incidents: 15
-risk_level: "low"
-year: 2024
 ---
 
 # Reentrancy

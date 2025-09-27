@@ -1,0 +1,162 @@
+- year: 2024
+  rank: 1
+  id: "stolen-private-keys"
+  amount_stolen: "$449,000,000"
+  incidents: 31
+  risk_level: "high"
+  unlocked: false 
+
+- year: 2024
+  rank: 2
+  id: "price-oracle-manipulation"
+  amount_stolen: "$52,000,000"
+  incidents: 37
+  risk_level: "medium"
+  unlocked: false 
+
+- year: 2024
+  rank: 3
+  id: "malicious-insider"
+  amount_stolen: "$95,000,000"
+  incidents: 17
+  risk_level: "high"
+  unlocked: false 
+
+- year: 2024
+  rank: 4
+  id: "function_parameter_validation"
+  amount_stolen: "$69,000,000"
+  incidents: 21
+  risk_level: "low"
+  unlocked: false 
+
+- year: 2024
+  rank: 5
+  id: "insufficient-function-access-controls"
+  amount_stolen: "$27,000,000"
+  incidents: 29
+  risk_level: "low"
+  unlocked: false 
+
+- year: 2024
+  rank: 6
+  id: "reward-manipulation"
+  amount_stolen: "$17,000,000"
+  incidents: 34
+  risk_level: "medium"
+  unlocked: false 
+
+- year: 2024
+  rank: 7
+  id: "reentrancy"
+  amount_stolen: "$36,000,000"
+  incidents: 15
+  risk_level: "low"
+  unlocked: false 
+
+- year: 2024
+  rank: 8
+  id: "arbitrary-external-call"
+  amount_stolen: "$27,000,000"
+  incidents: 11
+  risk_level: "low"
+  unlocked: false 
+
+- year: 2024
+  rank: 9
+  id: "governance-attacks"
+  amount_stolen: "$30,000,000"
+  incidents: 8
+  risk_level: "low"
+  unlocked: false 
+
+- year: 2024
+  rank: 10
+  id: "uninitialized-proxies"
+  amount_stolen: "$20,000,000"
+  incidents: 8
+  risk_level: "low"
+  unlocked: true 
+
+- year: 2025
+  rank: 1
+  id: "stolen-private-keys"
+  amount_stolen: "$94,000,000"
+  incidents: 15
+  risk_level: "high"
+  unlocked: false 
+
+- year: 2025
+  rank: 2
+  id: "reward-manipulation"
+  amount_stolen: "$19,000,000"
+  incidents: 26
+  risk_level: "high"
+  unlocked: false 
+
+- year: 2025
+  rank: 3
+  id: "price-oracle-manipulation"
+  amount_stolen: "$14,000,000"
+  incidents: 28
+  risk_level: "high"
+  unlocked: false 
+
+- year: 2025
+  rank: 4
+  id: "insufficient-function-access-controls"
+  amount_stolen: "$14,000,000"
+  incidents: 26
+  risk_level: "high"
+  unlocked: false 
+
+- year: 2025
+  rank: 5
+  id: "malicious-insider"
+  amount_stolen: "$52,700,000"
+  incidents: 6
+  risk_level: "high"
+  unlocked: false 
+
+
+- year: 2025
+  rank: 6
+  id: "integer-overflow"
+  amount_stolen: "$260,000,000"
+  incidents: 1
+  risk_level: "medium"
+  unlocked: false 
+
+-
+- year: 2025
+  rank: 7
+  id: "function_parameter_validation"
+  amount_stolen: "$14,000,000"
+  incidents: 10
+  risk_level: "low"
+  unlocked: false 
+
+
+ year: 2025
+  rank: 8
+  id: "rounding-error"
+  amount_stolen: "$10,000,000"
+  incidents: 4
+  risk_level: "low"
+  unlocked: false 
+
+- year: 2025
+  rank: 9
+  id: "logic-error"
+  amount_stolen: "$1,500,000"
+  incidents: 9
+  risk_level: "low"
+  unlocked: false 
+
+- year: 2025
+  rank: 10
+  id: "supply-chain"
+  amount_stolen: "$4,700,000"
+  incidents: 2
+  risk_level: "low"
+  unlocked: false 

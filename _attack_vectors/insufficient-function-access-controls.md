@@ -1,11 +1,6 @@
 ---
 layout: default
 title: "Insufficient Function Access Controls"
-rank: 5
-amount_stolen: "$27,000,000"
-incidents: 29
-risk_level: "low"
-year: 2024
 ---
 
 # Insufficient Function Access Controls

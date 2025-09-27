@@ -2,11 +2,6 @@
 ---
 layout: default
 title: "Uninitialized Proxies"
-rank: 10
-amount_stolen: "$20,000,000"
-incidents: 8
-risk_level: "low"
-year: 2024
 ---
 # Uninitialized Proxies
 

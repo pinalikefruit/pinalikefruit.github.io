@@ -1,11 +1,6 @@
 ---
 layout: default
 title: "Stolen Private keys "
-rank: 1
-amount_stolen: "$449,000,000"
-incidents: 31
-risk_level: "high"
-year: 2024
 ---
 
 

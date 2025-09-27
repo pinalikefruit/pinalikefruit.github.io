@@ -1,11 +1,6 @@
 ---
 layout: default
 title: "Reward Manipulation"
-rank: 6
-amount_stolen: "$17,000,000"
-incidents: 34
-risk_level: "medium"
-year: 2024
 ---
 
 # Reward Manipulation

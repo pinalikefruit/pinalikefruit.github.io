@@ -1,11 +1,6 @@
 ---
 layout: default
 title: "Arbitrary External Call"
-rank: 8
-amount_stolen: "$27,000,000"
-incidents: 11
-risk_level: "low"
-year: 2024
 ---
 
 # Arbitrary External Call

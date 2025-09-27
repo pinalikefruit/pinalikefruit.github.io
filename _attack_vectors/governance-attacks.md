@@ -1,11 +1,6 @@
 ---
 layout: default
 title: "Governance"
-rank: 9
-amount_stolen: "$30,000,000"
-incidents: 8
-risk_level: "low"
-year: 2024
 ---
 
 # Governance Attacks

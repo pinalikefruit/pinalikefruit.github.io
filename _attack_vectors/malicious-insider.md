@@ -1,11 +1,6 @@
 ---
 layout: default
 title: "Malicious Insider"
-rank: 3
-amount_stolen: "$95,000,000"
-incidents: 17
-risk_level: "high"
-year: 2024
 ---
 
 # Malicious Insider

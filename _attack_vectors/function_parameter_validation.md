@@ -1,11 +1,6 @@
 ---
 layout: default
 title: "Function Parameter Validation"
-rank: 4
-amount_stolen: "$69,000,000"
-incidents: 21
-risk_level: "low"
-year: 2024
 ---
 
 # Function Parameter Validation
