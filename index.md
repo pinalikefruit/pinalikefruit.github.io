@@ -10,8 +10,8 @@ This is a breakdown of the top DeFi attack vectors by funds lost. Select a year 
 
 
 <ul class="tab-nav">
-  <li class="active" data-tab="2024">2024 (Jan-Nov)</li>
-  <li data-tab="2025">2025 (Jan-Nov)</li>
+  <li class="active" data-tab="2024">2024</li>
+  <li data-tab="2025">2025</li>
 </ul>
 
 
