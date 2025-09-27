@@ -1,7 +1,10 @@
 ---
-title: Stole Private Key
-amount_stolen: "$1.2 Billion"
 layout: default
+title: "Stolen Private Keys"
+rank: 1
+amount_stolen: "$449,000,000"
+incidents: 31
+risk_level: "high" # 'high' for red, 'medium' for green, 'low' for blue
 ---
 
 

@@ -1,0 +1,78 @@
+---
+---
+
+body {
+  background-color: #121212; // Dark background
+  color: #e0e0e0; // Light gray text
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+// Style the main content area provided by the theme
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+h1, h2, h3 {
+  color: #ffffff; // Make headers pure white
+}
+
+a {
+  color: #4daaff; // A nice blue for links
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+// --- Table Styling for the Attack Vector List ---
+
+.vector-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2em;
+}
+
+.vector-table th, .vector-table td {
+  padding: 15px 10px;
+  text-align: left;
+  border-bottom: 1px solid #444; // The lines between rows
+}
+
+.vector-table th {
+  font-weight: bold;
+  color: #aaa;
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+
+.vector-table .rank {
+  font-size: 2em;
+  font-weight: bold;
+  color: #777;
+  width: 5%;
+}
+
+.vector-table .name a {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.vector-table .amount, .vector-table .incidents {
+  font-family: monospace; // Gives a techy feel to numbers
+  font-size: 1.1em;
+  text-align: right;
+}
+
+// --- Risk Level Color Coding ---
+.risk-high a {
+    color: #ff5c5c; // Red
+}
+.risk-medium a {
+    color: #5cffa1; // Green
+}
+.risk-low a {
+    color: #5c86ff; // Blue
+}
