@@ -4,8 +4,8 @@
 
 // --- Global & Typography ---
 body {
-  background-color: #ffffff; // Clean white background
-  color: #333; // Dark gray text for readability
+  background-color: #f1ebdf 
+  color: #9e9992; 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
 }
@@ -17,16 +17,15 @@ body {
   padding: 50px 25px;
 }
 
-// --- Links & Headers with "Hacker" Font ---
+// --- Links & Headers ---
 h1, h2, h3, h4, h5, h6 {
-  color: #111; // Near-black for strong headings
-  font-family: "Roboto Mono", "SF Mono", "Consolas", "Menlo", monospace; // Monospaced "hacker" font stack
-  font-weight: 600;
+  color: #86837d // Near-black for strong headings
+  font-family: "Roboto Mono", "SF Mono", "Consolas", "Menlo", monospace; 
 }
 
 // Single vibrant accent color for links
 a {
-  color: #007bff; // Electric blue
+  color: #8f9981; // Electric blue
   text-decoration: none;
   font-weight: 600;
 }
@@ -60,7 +59,7 @@ a:hover {
 .vector-table .rank {
   font-size: 1.5em;
   font-family: "Roboto Mono", "SF Mono", "Consolas", "Menlo", monospace;
-  color: #999;
+  color: #d7c9c8;
   width: 5%;
 }
 
@@ -73,18 +72,18 @@ a:hover {
   font-family: "Roboto Mono", "SF Mono", "Consolas", "Menlo", monospace;
   font-size: 1.1em;
   text-align: right;
-  color: #555;
+  color: #d7c9c8;
 }
 
-// --- Risk Level Color Coding (Using the same accent color) ---
+
 .risk-high a {
-    color: #d9534f; // A distinct red for high risk
+    color: #d0c8d7; // A distinct red for high risk
 }
 .risk-medium a {
-    color: #5cb85c; // A clear green for medium risk
+    color: #c8d6d7; // A clear green for medium risk
 }
 .risk-low a {
-    color: #007bff; // The standard blue for low risk
+    color: #ced7c8; // The standard blue for low risk
 }
 
 // --- Tab System Styling ---
@@ -107,8 +106,8 @@ a:hover {
 }
 
 .tab-nav li.active {
-  color: #007bff; // The active tab color
-  border-bottom-color: #007bff; // The active underline
+  color: #cfafad; // The active tab color
+  border-bottom-color: #cfafad; // The active underline
 }
 
 .tab-content {
