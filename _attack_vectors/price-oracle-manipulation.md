@@ -1,10 +1,11 @@
 ---
 layout: default
 title: "Price Oracle Manipulation"
-rank: 2
+rank: 1
 amount_stolen: "$52,000,000"
 incidents: 37
 risk_level: "medium"
+year: 2025
 ---
 
 ## What are Stolen Private Keys?

@@ -22,5 +22,29 @@
         {{ content }}
       </section>
     </div>
+    </div>
+    
+    <!-- Add this script block -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const tabs = document.querySelectorAll('.tab-nav li');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+          tab.addEventListener('click', () => {
+            // Get the target tab ID from the data-tab attribute
+            const targetId = 'tab-' + tab.getAttribute('data-tab');
+
+            // Remove 'active' class from all tabs and content
+            tabs.forEach(t => t.classList.remove('active'));
+            tabContents.forEach(c => c.classList.remove('active'));
+
+            // Add 'active' class to the clicked tab and its corresponding content
+            tab.classList.add('active');
+            document.getElementById(targetId).classList.add('active');
+          });
+        });
+      });
+    </script>
   </body>
 </html>
