@@ -1,78 +1,88 @@
 ---
 ---
+// The two lines of dashes above are required for Jekyll to process this file.
 
+// --- Global & Typography ---
 body {
-  background-color: #121212; // Dark background
-  color: #e0e0e0; // Light gray text
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: #ffffff; // Clean white background
+  color: #333; // Dark gray text for readability
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
 }
 
-// Style the main content area provided by the theme
+// --- Layout ---
 .wrapper {
-  max-width: 960px;
+  max-width: 800px; // Narrower width for better reading experience
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 50px 25px;
 }
 
-h1, h2, h3 {
-  color: #ffffff; // Make headers pure white
+// --- Links & Headers with "Hacker" Font ---
+h1, h2, h3, h4, h5, h6 {
+  color: #111; // Near-black for strong headings
+  font-family: "Roboto Mono", "SF Mono", "Consolas", "Menlo", monospace; // Monospaced "hacker" font stack
+  font-weight: 600;
 }
 
+// Single vibrant accent color for links
 a {
-  color: #4daaff; // A nice blue for links
+  color: #007bff; // Electric blue
   text-decoration: none;
+  font-weight: 600;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-// --- Table Styling for the Attack Vector List ---
-
+// --- Table Styling (Minimalist) ---
 .vector-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 2em;
+  margin-top: 2.5em;
 }
 
 .vector-table th, .vector-table td {
-  padding: 15px 10px;
+  padding: 16px 8px;
   text-align: left;
-  border-bottom: 1px solid #444; // The lines between rows
+  border-bottom: 1px solid #e0e0e0; // Lighter, subtle lines
 }
 
 .vector-table th {
-  font-weight: bold;
-  color: #aaa;
-  font-size: 0.9em;
+  color: #888;
+  font-size: 0.8em;
+  font-weight: normal;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; // Use body font for table headers
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .vector-table .rank {
-  font-size: 2em;
-  font-weight: bold;
-  color: #777;
+  font-size: 1.5em;
+  font-family: "Roboto Mono", "SF Mono", "Consolas", "Menlo", monospace;
+  color: #999;
   width: 5%;
 }
 
 .vector-table .name a {
-  font-weight: bold;
   font-size: 1.1em;
+  font-weight: 600;
 }
 
 .vector-table .amount, .vector-table .incidents {
-  font-family: monospace; // Gives a techy feel to numbers
+  font-family: "Roboto Mono", "SF Mono", "Consolas", "Menlo", monospace;
   font-size: 1.1em;
   text-align: right;
+  color: #555;
 }
 
-// --- Risk Level Color Coding ---
+// --- Risk Level Color Coding (Using the same accent color) ---
 .risk-high a {
-    color: #ff5c5c; // Red
+    color: #d9534f; // A distinct red for high risk
 }
 .risk-medium a {
-    color: #5cffa1; // Green
+    color: #5cb85c; // A clear green for medium risk
 }
 .risk-low a {
-    color: #5c86ff; // Blue
+    color: #007bff; // The standard blue for low risk
 }
