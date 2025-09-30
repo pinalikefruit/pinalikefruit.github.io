@@ -4,8 +4,7 @@ title: "Uninitialized Proxies"
 ---
 # Uninitialized Proxies
 
-> [!IMPORTANT]
-> Implementing upgradability in your smart contract? 
+> **Implementing upgradability in your smart contract?**
 
 
 This is the vulnerability behind a **$10 million bug bounty**. It’s one of the simplest mistakes to make and one of the most devastating.
@@ -62,7 +61,7 @@ Prevention requires a combination of correct deployment procedures:
 
     Use OpenZeppelin's `Initializable.sol` contract. It provides an initializer modifier that ensures an initialize function can only be called once, effectively mimicking a constructor's one-time execution.
 
-    ```js
+    ```
     import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
     contract MyContract is Initializable {
@@ -83,7 +82,7 @@ Prevention requires a combination of correct deployment procedures:
 
     To prevent anyone from calling initialize on the implementation contract itself, preventing it from being claimed or misused:
 
-    ```js
+    ```
     constructor() {
         _disableInitializers();
     }
