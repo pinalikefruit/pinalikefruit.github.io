@@ -4,7 +4,17 @@ title: "Uninitialized Proxies"
 ---
 # Uninitialized Proxies
 
+<<<<<<< Updated upstream
 | This is the vulnerability behind a $10 million bug bounty. It’s one of the simplest mistakes to make and one of the most devastating. Here’s how to understand it and prevent it.
+=======
+> [!IMPORTANT]
+> Implementing upgradability in your smart contract? 
+
+
+This is the vulnerability behind a **$10 million bug bounty**. It’s one of the simplest mistakes to make and one of the most devastating.
+
+
+>>>>>>> Stashed changes
 
 ## What is an Uninitialized Proxy
 
@@ -12,13 +22,19 @@ An Uninitialized Proxy is a vulnerability that occurs in upgradeable smart contr
 
 The root cause is a failure to call the initialize() function on a proxy contract after deployment, leaving it in a state where anyone can claim it.
 
-This vulnerability stems from a fundamental aspect of the proxy pattern: the separation of state and logic. The proxy contract holds the state, while an implementation contract holds the logic. Because a constructor only runs in the context of the contract being created, it only sets the state for the implementation contract itself, not the proxy.
+This vulnerability stems from a fundamental aspect of the proxy pattern: the separation of **state** and **logic**. The proxy contract holds the state, while an implementation contract holds the logic. Because a constructor only runs in the context of the contract being created, it only sets the state for the implementation contract itself, not the proxy.
 
 ### Real-World Impact: The Wormhole Bug
 
+<<<<<<< Updated upstream
 In February 2022, a whitehat hacker discovered a critical uninitialized proxy vulnerability in Wormhole's bridge contract on Ethereum. By calling the initialize() function on the core bridge contract, an attacker could have gained ownership, replaced the implementation with a malicious contract, and triggered selfdestruct. This would have destroyed the logic contract, leaving the proxy pointing to an empty address and permanently "bricking" the protocol.
 
  The vulnerability was responsibly disclosed, and the hacker was awarded a $10 million bug bounty, the largest in history, for preventing a catastrophic exploit.
+=======
+In _February 2022_, a whitehat hacker discovered a critical uninitialized proxy vulnerability in Wormhole's bridge contract on Ethereum. By calling the `initialize()` function on the core bridge contract, an attacker could have gained ownership, replaced the implementation with a malicious contract, and triggered `selfdestruct` function. This would have destroyed the logic contract, leaving the proxy pointing to an empty address and permanently stop the protocol.
+
+The vulnerability was responsibly disclosed, and the hacker was awarded a [$10 million bug bounty](https://medium.com/immunefi/wormhole-uninitialized-proxy-bugfix-review-90250c41a43a), the largest in history, for preventing the exploit.
+>>>>>>> Stashed changes
 
 ## How the Attack Works
 
@@ -30,13 +46,17 @@ In a proxy setup, you have two separated components:
 
 **The Role of delegatecall**
 
-When a user sends a transaction to the Proxy, the Proxy uses the delegatecall opcode to execute the function logic from the implementation. The crucial feature of delegatecall is that the implementation's code runs in the context of the calling contract (the Proxy). This means the Implementation's code directly modifies the Proxy's storage.
+When a user sends a transaction to the Proxy, the Proxy uses the delegatecall opcode to execute the function logic from the implementation. The feature of delegatecall is that the implementation's code runs in the context of the calling contract (the Proxy). This means the Implementation's code directly modifies the Proxy's storage.
 
+<<<<<<< Updated upstream
 ```sol
 // Conceptual Flow
 User -> Proxy.sol (Storage) --[DELEGATECALL]--> Implementation.sol (Logic)
 // Result: Storage at Proxy.sol is modified by code from Implementation.sol
 ```
+=======
+![Diagram of an uninitialized proxy attack](../assets/img/top10-imgA.png)
+>>>>>>> Stashed changes
 
 **Why the constructor Fails**
 
@@ -60,8 +80,13 @@ The critical step is to ensure the initialize() function is called atomically, i
 
 Use OpenZeppelin's Initializable.sol contract. It provides an initializer modifier that ensures an initialize function can only be called once, effectively mimicking a constructor's one-time execution.
 
+<<<<<<< Updated upstream
 ```sol
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
+=======
+    ```js
+    import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
+>>>>>>> Stashed changes
 
 contract MyContract is Initializable {
 
@@ -81,6 +106,7 @@ contract MyContract is Initializable {
 
 To prevent anyone from calling initialize on the implementation contract itself, preventing it from being claimed or misused:
 
+<<<<<<< Updated upstream
 ```sol
 constructor() {
     _disableInitializers();
@@ -91,6 +117,18 @@ constructor() {
 * **Do Not Use selfdestruct**: Never include a function with selfdestruct in an implementation contract. An attacker gaining control of the implementation could trigger it, destroying the logic contract and permanently "bricking" the proxy.
 
 * **Note on the Cancun Fork (EIP-6780)**: While selfdestruct has been changed on the Ethereum mainnet post-Cancun (it no longer deletes code/storage), it remains fully destructive on L2s and other chains where the change is not yet active. It should be avoided entirely.
+=======
+    ```js
+    constructor() {
+        _disableInitializers();
+    }
+    ```
+4. **Avoid use**:
+
+    * **Do Not Use `selfdestruct`**: Never include a function with `selfdestruct` in an implementation contract. An attacker gaining control of the implementation could trigger it, destroying the logic contract.
+
+    * **Note on the Cancun Fork (EIP-6780)**: While `selfdestruct` has been changed on the Ethereum mainnet post-Cancun (it no longer deletes code/storage), it remains fully destructive on L2s and other chains where the change is not yet active. It should be avoided entirely.
+>>>>>>> Stashed changes
 
 * **Do Not Use delegatecall inside an implementation contract**: The proxy already uses delegatecall to run the implementation's code. This creates a dangerous, unpredictable chain of calls and should be avoided.
 
