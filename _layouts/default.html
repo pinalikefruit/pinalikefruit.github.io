@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <a href="https://www.flaticon.com/free-icons/pineaple" title="pineaple icons">Pineaple icons created by rizky maulidhani - Flaticon</a>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍍</text></svg>">
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="{{ "/assets/css/style.scss" | relative_url }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,12 +20,6 @@
       </header>
       <section>
         {{ content }}
-        
-        {% if page.collection == 'attack_vectors' %}
-        <p style="text-align: right; color: #888; font-style: italic; margin-top: 3em;">
-          Last updated: {{ page.last_modified_at | date: "%d-%m-%y" }}
-        </p>
-  {% endif %}
       </section>
       <footer style="margin-top: 4em; padding-top: 2em; border-top: 1px solid #e0e0e0; font-size: 0.9em; color: #777;">
         <p><strong>Disclaimer:</strong> Hi 👋 , I'm 🍍. The information and opinions presented on this website are solely my  <a href="https://github.com/pinalikefruit/>own</a>. This project is for educational purposes. Data is aggregated and inspired by the excellent work done by  <a href="https://blockthreat.io">BlockThreat.io</a>.</p>

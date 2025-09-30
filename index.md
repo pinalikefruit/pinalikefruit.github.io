@@ -1,12 +1,9 @@
 ---
 layout: default
 ---
-## DeFi Attack Vectors - Top 10 by Risk
+## The Top 10 Attack Vectors - by Risk
 
-This is a breakdown of the top DeFi attack vectors by funds lost. Select a year to view the corresponding data. Articles are unlocked weekly.
-
-
-<a href="https://newsletter.blockthreat.io/" target="_blank" rel="noopener noreferrer" class="btn">Inspired by BlockThreat.io</a>
+A constantly updated guide that compiles best practices from security experts for **developers** in one place, helping them avoid attacks.
 
 
 <ul class="tab-nav">

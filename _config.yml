@@ -5,5 +5,3 @@ description: How to Stay Safe
 collections:
   attack_vectors:
     output: true
-plugins:
-  - jekyll-last-modified-at
