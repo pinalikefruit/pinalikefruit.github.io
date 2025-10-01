@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-## The Top 10 Attack Vectors - by Risk
 
 A constantly updated guide that compiles best practices from security experts for **developers** in one place, helping them avoid attacks.
 
