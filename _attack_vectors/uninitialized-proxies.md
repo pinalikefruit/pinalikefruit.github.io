@@ -56,16 +56,16 @@ Prevention requires a combination of correct deployment procedures:
 
     Use OpenZeppelin's `Initializable.sol` contract. It provides an initializer modifier that ensures an initialize function can only be called once, effectively mimicking a constructor's one-time execution.
 
-```js
-    import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
+    ```
+        import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
-    contract MyContract is Initializable {
+        contract MyContract is Initializable {
 
-        function initialize() public initializer {
+            function initialize() public initializer {
         
+            }
         }
-    }
-```
+    ```
 
     * **initializer modifier**: This locks the function after its first successful execution.
 
@@ -77,11 +77,11 @@ Prevention requires a combination of correct deployment procedures:
 
     To prevent anyone from calling initialize on the implementation contract itself, preventing it from being claimed or misused:
 
-```js
-    constructor() {
-        _disableInitializers();
-    }
-```
+    ```
+        constructor() {
+            _disableInitializers();
+        }
+    ```
 4. **Avoid use**:
 
     * **Do Not Use `selfdestruct`**: Never include a function with `selfdestruct` in an implementation contract. An attacker gaining control of the implementation could trigger it, destroying the logic contract.
