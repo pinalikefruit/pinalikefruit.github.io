@@ -5,7 +5,7 @@ title: "Governance"
 
 # Governance Attacks
 
-| A Governance Attack is the malicious exploitation of a decentralized protocol's intended governance mechanics to enact changes that benefit an attacker at the expense of the protocol and its users. 
+It's the malicious exploitation of a decentralized protocol's intended governance mechanics to enact changes that benefit an attacker at the expense of the protocol and its users. 
 
 ## What is a Governance Attack?
 
@@ -17,7 +17,7 @@ The core vulnerability stems from equating token holdings with voting power. Thi
 
 In April 2022, Beanstalk DAO was exploited for $182 million in one of the most infamous governance attacks. The attacker executed the following steps:
 
-1. Submitted two proposals: a malicious one (BIP-18) to transfer all funds to themselves, and a decoy (BIP-19) to donate funds to Ukraine, making the action seem less suspicious.
+1. Submitted two proposals: a malicious one (BIP-18) to transfer all funds to themselves, and a decoy (BIP-19) to donate funds to Ukraine.
 
 2. Acquired a massive flash loan of various tokens from Aave, Uniswap, and SushiSwap.
 
@@ -35,7 +35,7 @@ The entire attack was executed within a single transaction, using the DAO's own 
 
 The attack surface of a DAO is defined by its core components:
 
-* **Voting Tokens**: These grant the right to vote on proposals. The fundamental assumption is that owning these tokens aligns incentives.
+* **Voting Tokens**: These grant the right to vote on proposals. The assumption is that owning these tokens aligns incentives.
 
 * **Proposals**: These are executable bundles of code that can make changes to the protocol if passed. The danger lies in what a proposal is allowed to do.
 
@@ -45,7 +45,7 @@ A governance attack exploits a weakness in one or more of these areas. The most 
 
 1. **Flash Loan-Based Voting** :If a protocol's governance mechanism checks voting power at the exact moment of a vote, an attacker can use a flash loan to borrow a massive number of governance tokens, vote to pass their own malicious proposal, execute it, and repay the loan all in one atomic transaction.
 
-2.** Malicious Proposal Execution**:A proposal's text description can be deceptive. The actual payload is executable on-chain code, which can be obfuscated or hidden. For example, a proposal might claim to be a simple parameter tweak, but its code could use CREATE2 to deploy a new, malicious contract and then delegatecall into it, draining funds. Without rigorous analysis of the proposal's on-chain execution, voters can be easily tricked.
+2. **Malicious Proposal Execution**:A proposal's text description can be deceptive. The actual payload is executable on-chain code, which can be obfuscated or hidden. For example, a proposal might claim to be a simple parameter tweak, but its code could use CREATE2 to deploy a new, malicious contract and then delegatecall into it, draining funds. Without rigorous analysis of the proposal's on-chain execution, voters can be easily tricked.
 
 3. **Emergency Proposal Abuse**: Some DAOs have an "emergency" track that bypasses or shortens the standard timelock and lowers the quorum requirements. This is intended for rapid bug fixes. This mechanism can be abused by attackers to fast-track a malicious proposal, giving the community no time to react or organize a counter-vote.
 
@@ -59,14 +59,14 @@ Preventing governance attacks requires a multi-layered defense combining technic
 
     * **Vote Locking**: Require users to lock their governance tokens for the duration of the voting and execution period. This introduces a real economic cost and risk for an attacker, as they cannot simply borrow and return tokens in a single transaction.
 
-2. **Enforce Mandatory TimelocksEnforce** 
+2. **Enforce Mandatory Timelocks Enforce** 
 A non-bypassable delay between when a proposal passes and when it can be executed. A timelock of 2-7 days gives the community time to analyze the proposal's code, react to any malicious intent, and exit the protocol if necessary. Emergency tracks should be used with extreme caution, if at all.
 
 3. **Limit Governance Power**  
 Strictly scope what governance can and cannot do. For example, governance should be able to change protocol fees but should never have the power to arbitrarily upgrade contracts or directly access user funds in unrelated vaults. This limits the blast radius of a successful attack.
 
 4. **Use Battle-Tested Frameworks** 
-Implement governance using robust, audited frameworks like OpenZeppelin Governor (based on Compound's proven model). These have built-in protections and follow best practices.
+Implement governance using robust, audited frameworks like [OpenZeppelin Governor](https://docs.openzeppelin.com/contracts/5.x/api/governance) (based on Compound's proven model). These have built-in protections and follow best practices.
 
 5. **Implement Procedural Safeguards & Verification**
 
