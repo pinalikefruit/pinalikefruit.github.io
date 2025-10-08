@@ -60,7 +60,7 @@
   amount_stolen: "$27,000,000"
   incidents: 11
   risk_level: "low"
-  unlocked: false 
+  unlocked: true 
 
 - year: 2024
   rank: 9
